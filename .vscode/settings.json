@@ -14,5 +14,10 @@
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "cSpell.words": ["signin", "Hasibul", "Hasib"]
+  "cSpell.words": [
+    "Hasib",
+    "Hasibul",
+    "signin",
+    "syntec"
+  ]
 }
