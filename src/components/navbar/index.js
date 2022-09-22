@@ -24,8 +24,8 @@ export const Navbar = ({ toggle }) => {
   };
 
   useEffect(() => {
-      window.addEventListener('scroll', changeNav);      
-  }, [])
+    window.addEventListener("scroll", changeNav);
+  }, []);
 
   return (
     <>
@@ -47,9 +47,9 @@ export const Navbar = ({ toggle }) => {
             <NavItem>
               <NavLinks to="services">Services</NavLinks>
             </NavItem>
-            <NavItem>
-              <NavLinks to="signup">Sign Up</NavLinks>
-            </NavItem>
+            <NavBtn>
+              <NavBtnLink to="/dashboard">Dashboard</NavBtnLink>
+            </NavBtn>
           </NavMenu>
           <NavBtn>
             <NavBtnLink to="/signin">Sign In</NavBtnLink>
