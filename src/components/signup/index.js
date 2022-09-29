@@ -50,7 +50,7 @@ const Signup = () => {
       });
       const response = await request.json();
       if (response.acknowledgement) {
-        console.log(response);
+        localStorage.setItem("syntec-user", JSON.stringify(response.data));
         window.location.href = "http://localhost:3000/signin";
       }
     };
