@@ -41,7 +41,7 @@ const Signup = () => {
     // console.log(userInfo);
 
     const postAnUser = async () => {
-      const request = await fetch(`http://localhost:8080/user`, {
+      const request = await fetch(`http://localhost:8080/user/signup`, {
         method: "POST",
         headers: {
           "content-type": "application/json",
