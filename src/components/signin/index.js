@@ -26,7 +26,7 @@ const Signin = () => {
       });
       const response = await request.json();
       if (response.acknowledgement) {
-        console.log(response);
+        localStorage.setItem("syntec-user", JSON.stringify(response.data.user));
         window.location.replace("http://localhost:3000/");
       }
     };
