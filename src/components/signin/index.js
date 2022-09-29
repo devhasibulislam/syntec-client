@@ -25,7 +25,10 @@ const Signin = () => {
         body: JSON.stringify(userInfo),
       });
       const response = await request.json();
-      if (response.acknowledgement) console.log(response);
+      if (response.acknowledgement) {
+        console.log(response);
+        window.location.href = "http://localhost:3000/";
+      }
     };
     postAnUser();
 
