@@ -27,7 +27,7 @@ const Signin = () => {
       const response = await request.json();
       if (response.acknowledgement) {
         console.log(response);
-        window.location.href = "http://localhost:3000/";
+        window.location.replace("http://localhost:3000/");
       }
     };
     postAnUser();
