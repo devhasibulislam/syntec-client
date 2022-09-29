@@ -12,8 +12,11 @@ import {
   NavBtnLink,
 } from "./NavbarElements";
 import "./../../App.css";
+import useUser from "../../hooks/useUser";
 
 export const Navbar = ({ toggle }) => {
+  const user = useUser();
+
   const [scrollNav, setScrollNav] = useState(false);
   const changeNav = () => {
     if (window.scrollY >= 80) {
@@ -52,7 +55,18 @@ export const Navbar = ({ toggle }) => {
             </NavBtn>
           </NavMenu>
           <NavBtn>
-            <NavBtnLink to="/signin">Sign In</NavBtnLink>
+            {user ? (
+              <NavBtnLink
+                onClick={() => {
+                  localStorage.removeItem("syntec-user");
+                  window.location.reload();
+                }}
+              >
+                Sign out
+              </NavBtnLink>
+            ) : (
+              <NavBtnLink to="/signin">Sign in</NavBtnLink>
+            )}
           </NavBtn>
         </NavbarContainer>
       </Nav>
